@@ -1,0 +1,529 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 2vmin; /* Alternate size 16px */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #505050;
+}
+
+main, footer {
+    position: relative;
+    top: 4.5rem;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.image-container {
+    overflow: hidden;
+    box-shadow: 5px 5px 20px darkslategrey;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.button {
+    padding: 1rem 0;
+    background-color: #505050;
+    color: white;
+    text-align: center;
+    font-size: 1.25rem;
+    width: 80%;
+    box-shadow: 5px 5px 20px darkslategrey;
+    transition: all 0.5s ease-in 0.1s;
+}
+
+.button:hover {
+    background-color: darkslategray;
+    padding: 1.25rem 0.5rem;
+    box-shadow: 5px 5px 20px black
+}
+
+.side-container {
+    display: flex;
+    align-items: center;
+    transition: background-color 0.5s ease-in 0.1s;
+}
+
+.side-container:hover {
+    background-color: lightgray;
+}
+
+h1 {
+    font-size: 6vmin; /* Alternate size 3.125rem */
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 5vmin; /* Alternate size 2.625rem */
+    font-weight: 800;
+}
+
+h3 {
+    font-size: 3vmin; /* Alternate size 1.75rem */
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #505050;
+}
+
+a:hover {
+    color: rgb(122, 172, 189);
+    font-size: 110%;
+}
+
+/* Header */
+
+header {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 4.5rem;
+    background-color: rgb(139, 221, 222);
+    font-size: 1.25rem;
+    line-height: 4.5rem;
+    overflow: hidden;
+    opacity: 0.8;
+}
+
+header .left {
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 1.5rem;
+}
+
+header .right {
+    margin-right: 1.5rem;
+}
+
+header li {
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+header .left a:hover {
+    color: #505050;
+}
+
+header span {
+    color: gray;
+}
+
+.desktop img {
+    height: 4rem;
+    width: auto;
+    vertical-align: middle;
+}
+
+header .mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 650px) {
+
+    header .desktop {
+        display: none;
+    }
+    
+    header .mobile {
+        display: block;
+        width: 100%;
+        height: 4.5rem;
+        text-align: center;
+    }
+
+    header li {
+        margin: 0 4rem;
+    }
+
+    header .mobile img {
+        height: 3.5rem;
+        width: auto;
+        vertical-align: middle;
+    }
+}
+
+/* Banner */
+
+#banner {
+    display: flex;
+    align-items: center;
+    background-color: rgb(162, 214, 183);
+}
+
+#banner-image {
+    width: 50%;
+    margin: 2rem;
+}
+
+#banner .content {
+    width: 30%;
+    padding: 4rem 1.5rem;
+}
+
+#banner h3 {
+    margin-bottom: 2.5rem;
+    line-height: 1.5;
+}
+
+#banner a {
+    color: rgb(225, 5, 5);
+}
+
+@media only screen and (max-width: 1125px) {
+
+    #banner-image {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+    #banner-image {
+        min-width: 90%;
+    }
+
+    #banner {
+        flex-flow: column;
+    }
+
+    #banner .content {
+        width: 70%;
+        padding: 0 1rem 2rem;
+    }
+
+    .button {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+
+    #banner-image {
+        width: 100%;
+        margin: auto;
+    }
+
+    #banner .content {
+        padding: 2rem 0;
+    }
+
+}
+
+/* Campus Information */
+
+#campus-info {
+    display: flex;
+    background-color: rgb(201, 214, 159);
+}
+
+.learning-quote {
+    width: 50%;
+    margin: 2rem;
+}
+
+.learning-quote .content h2 {
+    margin: 2rem 0;
+}
+
+.learning-quote .content span {
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    padding: 2rem 0;
+}
+
+.campus-info {
+    width: 40%;
+    margin-top: 2rem;
+    margin-left: 1rem;
+}
+
+.campus-info .image-container {
+    max-width: 32%;
+    margin: 1rem;
+}
+
+.campus-info .content {
+    margin-left: 0.5rem;
+}
+
+.campus-info .content h3 {
+    margin: 0.5rem 0;
+}
+
+.campus-info .content p {
+    line-height: 2;
+}
+
+.campus-info .content a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: cornflowerblue;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+.campus-info .mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 650px) {
+
+    .campus-info .desktop, .learning-quote {
+        display: none;
+    }
+
+    .campus-info .mobile {
+        display: block;
+    }
+
+    .campus-info {
+        width: 100%;
+    }
+
+    .campus-info .image-container {
+        max-width: 100%;
+    }
+
+    #campus-info .side-container {
+        flex-flow: column;
+        align-items: flex-start;
+        border: none;
+    }
+
+    #campus-info .side-container:hover {
+        background-color: rgb(170, 110, 224);
+    }
+
+    .campus-info .content {
+        padding-left: 2rem;
+    }
+
+    #campus-info h3 {
+        font-size: 2rem;
+    }
+
+    #campus-info p {
+        font-size: 1.5rem;
+    }
+}
+
+/* Course Information */
+
+#course-info {
+    background-color: rgb(149, 104, 227);
+    padding: 2rem 0;
+}
+
+#course-info h2 {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+#course-info .course-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#course-info .courses {
+    max-width: 24%;
+    margin: 1rem;
+    background-color: rgb(190, 228, 115);
+    border-radius: 10px 10px 10px 10px;
+    transition: all 0.5s ease-in 0.1s;
+}
+
+#course-info .courses:hover {
+    background-color: rgb(54, 219, 169);
+    max-width: 28%;
+}
+
+#course-info .content {
+    padding: 2rem 2rem 1.5rem;
+}
+
+#course-info .content h3 {
+    margin-bottom: 1rem;
+}
+
+#course-info .content p {
+    line-height: 1.5;
+    color: rgb(218, 0, 247);
+    font-size: 1.125rem;
+}
+
+#course-info .courses-label {
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+}
+
+@media only screen and (max-width: 900px) {
+
+    #course-info .courses {
+        min-width: 36%;
+    }
+
+    #course-info .courses:hover {
+        min-width: 40%;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+
+    #course-info p {
+        display: none;
+    }
+
+    #course-info .course-container {
+        flex-flow: column;
+        align-items: center;
+    }
+
+    #course-info .courses {
+        background-color: rgb(17, 207, 181);
+        opacity: 0.9;
+        margin: 0.5rem 1.5rem;
+        max-width: 80%;
+    }
+
+    #course-info .courses:hover {
+        max-width: 100%;
+    }
+
+    #course-info h3 {
+        font-size: 2rem;
+    }
+}
+
+/* Thesis Exhibit */
+
+#thesis-exhibit {
+    background-color: rgb(22, 202, 193);
+    padding: 2rem 0 2rem 1.5rem;
+}
+
+#thesis-exhibit h2 {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+#thesis-container {
+    display: flex;
+    padding-top: 2rem;
+}
+
+#thesis-video {
+    width: 55%;
+    overflow: hidden;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#thesis-exhibit .image-container {
+    max-width: 32%;
+    margin: 1rem;
+}
+
+#thesis-exhibit .content h3 {
+    margin: 1rem 0;
+}
+
+.exhibit-container {
+    width: 45%;
+    margin-left: 2rem;
+}
+
+.exhibit-container .content {
+    margin-left: 0.5rem;
+}
+
+#thesis-exhibit .mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 650px) {
+
+    #thesis-exhibit .desktop, .exhibit-container, #thesis-container .content {
+        display: none;
+    }
+
+    #thesis-exhibit .mobile {
+        display: block;
+    }
+
+    #thesis-container, #thesis-video {
+        width: 100%;
+        padding-bottom: 3rem;
+    }
+
+    #thesis-exhibit {
+        padding: 0;
+    }
+
+    #thesis-exhibit h2 {
+        margin: 0;
+        padding: 1.5rem;
+    }
+}
+
+/* Footer */
+
+footer {
+    background-color: rgb(193, 115, 203);
+    border-top: 1px solid rgb(72, 218, 91);
+    width: 100%;
+    height: 4rem;
+    font-size: 0.875rem;
+}
+
+footer p {
+    margin-left: 1.5rem;
+}
+
+footer span {
+    margin: 1rem;
+}
+
+footer div {
+    padding-top: 1rem;
+}
+
+@media only screen and (max-width: 650px) {
+
+    footer .right {
+        display: none;
+    }
+
+    footer p {
+        font-size: 1.25rem;
+    }
+
+    footer {
+        border: none;
+    }
+}
